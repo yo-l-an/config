@@ -1,0 +1,57 @@
+const resolveFromConfig = (name) => require.resolve(name, { paths: [__dirname] });
+
+module.exports = {
+    printWidth: 120,
+    useTabs: false,
+    tabWidth: 4,
+    semi: true,
+    singleQuote: true,
+    quoteProps: 'as-needed',
+    jsxSingleQuote: true,
+    trailingComma: 'es5',
+    bracketSpacing: true,
+    objectWrap: 'preserve',
+    bracketSameLine: false,
+    arrowParens: 'always',
+    proseWrap: 'preserve',
+    htmlWhitespaceSensitivity: 'css',
+    endOfLine: 'lf',
+    embeddedLanguageFormatting: 'auto',
+    singleAttributePerLine: true,
+    experimentalOperatorPosition: 'start',
+    experimentalTernaries: true,
+
+    plugins: [
+        resolveFromConfig('prettier-plugin-css-order'),
+        resolveFromConfig('prettier-plugin-multiline-arrays'),
+        resolveFromConfig('@xeonlink/prettier-plugin-organize-attributes'),
+    ],
+    cssDeclarationSorterOrder: 'smacss',
+    cssDeclarationSorterKeepOverrides: false,
+    multilineArraysWrapThreshold: -1,
+    attributeIgnoreCase: true,
+    attributeGroups: [
+        '^(id|name)$',
+        '^data-name$',
+        '^(class|style)$',
+        '^(href|target)$',
+        '^src$',
+        '^title$',
+        '^alt$',
+        '$DEFAULT',
+        '^data-',
+        '^aria-',
+        '^role$',
+        '^tabindex$',
+        '^on',
+    ],
+
+    overrides: [
+        {
+            files: '**/lwc-dev/**/*.html',
+            options: {
+                parser: 'lwc',
+            },
+        },
+    ],
+};
