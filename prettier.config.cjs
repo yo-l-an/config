@@ -27,7 +27,7 @@ module.exports = {
         resolveFromConfig('@xeonlink/prettier-plugin-organize-attributes'),
     ],
     cssDeclarationSorterOrder: 'smacss',
-    cssDeclarationSorterKeepOverrides: false,
+    cssDeclarationSorterKeepOverrides: true,
     multilineArraysWrapThreshold: -1,
     attributeIgnoreCase: true,
     attributeGroups: [
