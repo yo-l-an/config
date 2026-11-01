@@ -25,6 +25,7 @@ module.exports = {
         resolveFromConfig('prettier-plugin-css-order'),
         resolveFromConfig('prettier-plugin-multiline-arrays'),
         resolveFromConfig('@xeonlink/prettier-plugin-organize-attributes'),
+        resolveFromConfig('prettier-plugin-compact-markdown-tables'),
     ],
     cssDeclarationSorterOrder: 'smacss',
     cssDeclarationSorterKeepOverrides: true,
@@ -45,6 +46,8 @@ module.exports = {
         '^tabindex$',
         '^on',
     ],
+    markdownAlignedTableMaxWidth: 80,
+    markdownCompactTablesHeadingMarkers: 'always',
 
     overrides: [
         {
