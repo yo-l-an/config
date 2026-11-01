@@ -49,12 +49,5 @@ module.exports = {
     markdownAlignedTableMaxWidth: 80,
     markdownCompactTablesHeadingMarkers: 'always',
 
-    overrides: [
-        {
-            files: '**/lwc-dev/**/*.html',
-            options: {
-                parser: 'lwc',
-            },
-        },
-    ],
+    overrides: [],
 };
